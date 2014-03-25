@@ -91,6 +91,8 @@ for d in bingo:
 	printNiceList(makeState(state2,signs))
 	print "Operator:"
 	printNiceArray(doAllTensorThings(d))
+	print "Output:"
+	printNiceList(numpy.dot(doAllTensorThings(d),makeState(state2,signs)))
 	print "1 * State == Operator * State:"
 	print numpy.array_equal(makeState(state2,signs), numpy.dot(doAllTensorThings(d),makeState(state2,signs)))
 	print 
@@ -100,6 +102,8 @@ for d in bingo:
 	printNiceList(makeState(state1,signs))
 	print "Operator:"
 	printNiceArray(doAllTensorThings(d))
+	print "Output:"
+	printNiceList(numpy.dot(doAllTensorThings(d),makeState(state1,signs)))
 	print "1 * State == Operator * State:"
 	print numpy.array_equal(makeState(state1,signs), numpy.dot(doAllTensorThings(d),makeState(state1,signs)))
 	print 
